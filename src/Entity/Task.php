@@ -17,7 +17,7 @@ class Task
     private ?int $id;
 
      #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private ?int $createdAt;
+    private ?\DateTimeInterface $createdAt;
 
 
      #[ORM\Column(type: Types::TEXT)]
@@ -33,12 +33,12 @@ class Task
      #[ORM\Column(type: Types::BOOLEAN)]
     private ?string $isDone;
 
+     #[ORM\ManyToOne]
+     #[ORM\JoinColumn(nullable: false)]
+     private ?User $User = null;
+
     public function __construct()
     {
-        $datetime = new \DateTime();
-        $timestamp = $datetime->getTimestamp();
-        $variable = (int) $timestamp;
-        $this->createdAt = $variable;
         $this->isDone = false;
     }
 
@@ -47,12 +47,12 @@ class Task
         return $this->id;
     }
 
-    public function getCreatedAt()
+    public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
 
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -85,5 +85,17 @@ class Task
     public function toggle($flag)
     {
         $this->isDone = $flag;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->User;
+    }
+
+    public function setUser(?User $User): static
+    {
+        $this->User = $User;
+
+        return $this;
     }
 }

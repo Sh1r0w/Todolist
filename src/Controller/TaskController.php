@@ -5,6 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Attribute\Route;
+use App\Entity\User;
 use App\Entity\Task;
 use App\Form\TaskType;
 use Symfony\Component\HttpFoundation\Request;
@@ -12,14 +13,6 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class TaskController extends AbstractController
 {
-    /*#[Route('/task', name: 'app_task')]
-    public function index(): JsonResponse
-    {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/TaskController.php',
-        ]);
-    }*/
 
 
      #[Route('/task', name: 'task_list')]
@@ -34,11 +27,14 @@ class TaskController extends AbstractController
     {
         $task = new Task();
         $form = $this->createForm(TaskType::class, $task);
-        if($form->isSubmitted()){
-        
+        $user = $this->getUser()->getId();
+        $idUs = $em->getRepository(User::class)->findOneBy(['id' => $user]);
         $form->handleRequest($request);
 
-        if ($form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $task->setUser($idUs)
+                 ->setCreatedAt(new \DateTime());
             $em->persist($task);
             $em->flush();
 
@@ -46,7 +42,6 @@ class TaskController extends AbstractController
 
             return $this->redirectToRoute('task_list');
         }
-    }
         return $this->render('task/create.html.twig', ['form' => $form->createView()]);
     }
 
@@ -87,11 +82,15 @@ class TaskController extends AbstractController
      #[Route('/tasks/{id}/delete', name: 'task_delete')]
     public function deleteTaskAction(Task $task, EntityManagerInterface $em)
     {
+        if($task->getUser()->getId() == $this->getUser()->getId() || isset($this->getUser()->getRoles()[0]) == "ROLE_ADMIN"){
         $em->remove($task);
         $em->flush();
 
         $this->addFlash('success', 'La tâche a bien été supprimée.');
-
+    } else {
+        $this->addFlash('error', "ce n'ai pas votre tache.");
+    }
+    
         return $this->redirectToRoute('task_list');
     }
 }
