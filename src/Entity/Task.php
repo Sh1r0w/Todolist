@@ -40,7 +40,6 @@ class Task
     public function __construct()
     {
         $this->isDone = false;
-
     }
 
     public function getId()
