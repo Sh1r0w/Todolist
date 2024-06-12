@@ -1,51 +1,49 @@
 <?php
 
-namespace App\tests\Repository;
+namespace App\tests\Fonctionnel\Repository;
 
-use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Liip\TestFixturesBundle\Services\DatabaseToolCollection;
-use App\Entity\Task;
+use App\Entity\User;
 use Liip\TestFixturesBundle\Services\DatabaseTools\AbstractDatabaseTool;
+use Doctrine\ORM\EntityManagerInterface;
 
-class TaskRepositoryTest extends WebTestCase
+class UserRepositoryTest extends WebTestCase
 {
+
     /**
      * @var AbstractDatabaseTool
      */
+    protected $databaseTool;
 
-     protected $databaseTool;
+    protected $em;
 
-     protected $em;
-
-     public function setUp(): void
-     {
+    public function setUp(): void
+    {
         parent::setUp();
 
         $this->databaseTool = static::getContainer()->get(DatabaseToolCollection::class)->get();
 
         $this->em = static::getContainer()->get(EntityManagerInterface::class);
-     }
+    }
 
-    public function testSomething(): void
+
+    public function testUserRepo(): void
     {
-       //self::bootKernel();
-       
+
         $this->databaseTool->loadAliceFixture([
-            __DIR__ . '/TaskRepositoryTestFixtures.yaml'
+            __DIR__ . '/UserRepositoryTestFixtures.yaml'
         ]);
 
-        $tasks = $this->em->getRepository(Task::class)->count([]);
+        $users = $this->em->getRepository(User::class)->count([]);
 
-        $this->assertEquals(20, $tasks);
+        $this->assertEquals(10, $users);
 
     }
 
     protected function tearDown(): void
     {
-        
         parent::tearDown();
         unset($this->databaseTool);
-
     }
 }
