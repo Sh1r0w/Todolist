@@ -38,7 +38,7 @@ class TaskController extends AbstractController
             $em->persist($task);
             $em->flush();
 
-            $this->addFlash('success', 'La tâche a été bien été ajoutée.');
+            $this->addFlash('success', 'La tâche a été bien ajoutée.');
 
             return $this->redirectToRoute('task_list');
         }
@@ -82,7 +82,11 @@ class TaskController extends AbstractController
      #[Route('/tasks/{id}/delete', name: 'task_delete')]
     public function deleteTaskAction(Task $task, EntityManagerInterface $em)
     {
-        if($task->getUser()->getId() == $this->getUser()->getId() || isset($this->getUser()->getRoles()[0]) == "ROLE_ADMIN"){
+            $idUserTask = $task->getUser()->getId() ;
+            $idUser = $this->getUser()->getId();
+            $userRole = $this->getUser()->getRoles()[0];
+
+        if($idUserTask == $idUser || isset($userRole) == "ROLE_ADMIN"){
         $em->remove($task);
         $em->flush();
 
