@@ -46,4 +46,13 @@ class TaskTest extends KernelTestCase
         self::countError($this->getEntity('', ''), 2);
     }
 
+    public function testCreateAt(): void
+    {
+        $user = new Task();
+        $user->setCreatedAt(new \DateTime('2024-06-16'));
+
+        $this->assertEquals($user->getCreatedAt(), new \DateTime('2024-06-16'));
+
+    }
+
 }

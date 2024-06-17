@@ -4,12 +4,12 @@ namespace App\tests\Fonctionnel\Repository;
 
 use Doctrine\ORM\EntityManagerInterface;
 use PHPUnit\Framework\Attributes\DependsExternal;
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Liip\TestFixturesBundle\Services\DatabaseToolCollection;
 use App\Entity\Task;
 use Liip\TestFixturesBundle\Services\DatabaseTools\AbstractDatabaseTool;
 
-class TaskRepositoryTest extends WebTestCase
+class TaskRepositoryTest extends KernelTestCase
 {
     /**
      * @var AbstractDatabaseTool
