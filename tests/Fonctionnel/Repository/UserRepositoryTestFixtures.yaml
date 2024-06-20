@@ -4,3 +4,15 @@ App\Entity\User:
         roles: ['ROLE_USER']
         password: 0000
         username: <username()>
+
+    user_admin:
+        email: 'admin@todo.fr'
+        roles: ['ROLE_ADMIN']
+        password: 0000
+        username: 'admin'
+
+    user_user:
+        email: 'user@todo.fr'
+        roles: ['ROLE_USER']
+        password: 0000
+        username: 'user'

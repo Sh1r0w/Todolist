@@ -39,7 +39,7 @@ class UserTest extends KernelTestCase
         self::countError($this->getEntity('test@', 'superUser', '123456', ['ROLE_ADMIN']), 1);
         self::countError($this->getEntity('test@test.com', '', '123456', ['ROLE_ADMIN']), 1);
         self::countError($this->getEntity('test@test.com', 'Supername', '', ['ROLE_ADMIN']), 1);
-        self::countError($this->getEntity('test@test.com', 'Supername', '456789', []), 1);
-        self::countError($this->getEntity('', '', '', []), 4);
+        self::countError($this->getEntity('', '', '', ['ROLE_ADMIN']), 3);
     }
+
 }

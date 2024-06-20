@@ -50,18 +50,16 @@ class TaskController extends AbstractController
     public function editAction(Task $task, Request $request,EntityManagerInterface $em)
     {
         $form = $this->createForm(TaskType::class, $task);
-
-        if ($form->isSubmitted()){
         $form->handleRequest($request);
 
-        if ($form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $em->flush();
 
             $this->addFlash('success', 'La tâche a bien été modifiée.');
 
             return $this->redirectToRoute('task_list');
         }
-    }
+    
         return $this->render('task/edit.html.twig', [
             'form' => $form->createView(),
             'task' => $task,
@@ -84,9 +82,9 @@ class TaskController extends AbstractController
     {
             $idUserTask = $task->getUser()->getId() ;
             $idUser = $this->getUser()->getId();
-            $userRole = $this->getUser()->getRoles()[0];
+            $userRole = $this->getUser()->getRoles();
 
-        if($idUserTask == $idUser || isset($userRole) == "ROLE_ADMIN"){
+        if($idUserTask === $idUser || isset($userRole[0])){
         $em->remove($task);
         $em->flush();
 
