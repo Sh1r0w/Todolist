@@ -14,6 +14,6 @@ jobs:
           project-token: ${{ ed54ced99c6d43fa8787ca229c90f4d0 }}
           # or
           # api-token: ${{ secrets.CODACY_API_TOKEN }}
-          coverage-reports: tests\test-coverage
+          coverage-reports: 'tests\test-coverage'
           # or a comma-separated list for multiple reports
           # coverage-reports: <PATH_TO_REPORT>, <PATH_TO_REPORT>
