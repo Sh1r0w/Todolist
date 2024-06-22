@@ -25,7 +25,7 @@
     </exclude>
 
     <report>
-        <clover outputFile="clover.xml"/>
+        <clover outputFile="tests/clover.xml"/>
         <html outputDirectory="tests/coverage/html-coverage" lowUpperBound="50" highLowerBound="90"/>
         <xml outputDirectory="tests/coverage/xml-coverage"/>
     </report>
