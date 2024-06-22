@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <build time="Sat Jun 22 12:06:43 CEST 2024" phpunit="9.6.19" coverage="9.2.31">
+    <runtime name="PHP" version="8.2.4" url="https://secure.php.net/"/>
+    <driver name="xdebug" version="3.3.2"/>
+  </build>
+  <project source="E:\Cours php symfony\p8\Todolist\src">
+    <tests>
+      <test name="App\Tests\Fonctionnel\Controller\TaskControllerTest::testListTask" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Fonctionnel\Controller\TaskControllerTest::testToggleTaskAction" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Fonctionnel\Controller\TaskControllerTest::testDeleteTaskAction" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Fonctionnel\Controller\UserControllerTest::testListAction" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Fonctionnel\Controller\UserControllerTest::testUserCreate" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Fonctionnel\Controller\UserControllerTest::testEditAction" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Fonctionnel\Controller\defaultControllerTest::testDefaultController" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Fonctionnel\Controller\securityControllerTest::testLogout" size="unknown" result="0" status="PASSED"/>
+      <test name="App\tests\Fonctionnel\Repository\TaskRepositoryTest::testTaskRepo" size="unknown" result="0" status="PASSED"/>
+      <test name="App\tests\Fonctionnel\Repository\UserRepositoryTest::testUserRepo" size="unknown" result="0" status="PASSED"/>
+      <test name="App\tests\Fonctionnel\Repository\UserRepositoryTest::testUpdatePassword" size="unknown" result="0" status="PASSED"/>
+      <test name="App\tests\Fonctionnel\Repository\UserRepositoryTest::testUpgradePasswordError" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Unitaire\Entity\TaskTest::testGood" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Unitaire\Entity\TaskTest::testError" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Unitaire\Entity\TaskTest::testCreateAt" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Unitaire\Entity\UserTest::testGood" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Unitaire\Entity\UserTest::testError" size="unknown" result="0" status="PASSED"/>
+    </tests>
+    <directory name="/">
+      <totals>
+        <lines total="666" comments="84" code="582" executable="146" executed="144" percent="98.63"/>
+        <methods count="41" tested="39" percent="95.12"/>
+        <functions count="0" tested="0" percent="0"/>
+        <classes count="10" tested="8" percent="80.00"/>
+        <traits count="0" tested="0" percent="0"/>
+      </totals>
+      <directory name="Controller">
+        <totals>
+          <lines total="226" comments="2" code="224" executable="74" executed="72" percent="97.30"/>
+          <methods count="11" tested="9" percent="81.82"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="4" tested="2" percent="50.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+        <file name="DefaultController.php" href="Controller/DefaultController.php.xml">
+          <totals>
+            <lines total="17" comments="0" code="17" executable="1" executed="1" percent="100.00"/>
+            <methods count="1" tested="1" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="SecurityController.php" href="Controller/SecurityController.php.xml">
+          <totals>
+            <lines total="33" comments="2" code="31" executable="7" executed="6" percent="85.71"/>
+            <methods count="2" tested="1" percent="50.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="0" percent="0.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="TaskController.php" href="Controller/TaskController.php.xml">
+          <totals>
+            <lines total="99" comments="0" code="99" executable="37" executed="36" percent="97.30"/>
+            <methods count="5" tested="4" percent="80.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="0" percent="0.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="UserController.php" href="Controller/UserController.php.xml">
+          <totals>
+            <lines total="77" comments="0" code="77" executable="29" executed="29" percent="100.00"/>
+            <methods count="3" tested="3" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+      </directory>
+      <directory name="Entity">
+        <totals>
+          <lines total="231" comments="27" code="204" executable="30" executed="30" percent="100.00"/>
+          <methods count="23" tested="23" percent="100.00"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="2" tested="2" percent="100.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+        <file name="Task.php" href="Entity/Task.php.xml">
+          <totals>
+            <lines total="102" comments="0" code="102" executable="13" executed="13" percent="100.00"/>
+            <methods count="12" tested="12" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="User.php" href="Entity/User.php.xml">
+          <totals>
+            <lines total="129" comments="27" code="102" executable="17" executed="17" percent="100.00"/>
+            <methods count="11" tested="11" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+      </directory>
+      <directory name="Form">
+        <totals>
+          <lines total="82" comments="0" code="82" executable="35" executed="35" percent="100.00"/>
+          <methods count="4" tested="4" percent="100.00"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="2" tested="2" percent="100.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+        <file name="TaskType.php" href="Form/TaskType.php.xml">
+          <totals>
+            <lines total="29" comments="0" code="29" executable="8" executed="8" percent="100.00"/>
+            <methods count="2" tested="2" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="UserType.php" href="Form/UserType.php.xml">
+          <totals>
+            <lines total="53" comments="0" code="53" executable="27" executed="27" percent="100.00"/>
+            <methods count="2" tested="2" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+      </directory>
+      <directory name="Repository">
+        <totals>
+          <lines total="105" comments="55" code="50" executable="7" executed="7" percent="100.00"/>
+          <methods count="3" tested="3" percent="100.00"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="2" tested="2" percent="100.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+        <file name="TaskRepository.php" href="Repository/TaskRepository.php.xml">
+          <totals>
+            <lines total="44" comments="26" code="18" executable="1" executed="1" percent="100.00"/>
+            <methods count="1" tested="1" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="UserRepository.php" href="Repository/UserRepository.php.xml">
+          <totals>
+            <lines total="61" comments="29" code="32" executable="6" executed="6" percent="100.00"/>
+            <methods count="2" tested="2" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+      </directory>
+      <file name="AppBundle.php" href="AppBundle.php.xml">
+        <totals>
+          <lines total="10" comments="0" code="10" executable="0" executed="0" percent="0"/>
+          <methods count="0" tested="0" percent="0"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="0" tested="0" percent="0"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+      </file>
+      <file name="Kernel.php" href="Kernel.php.xml">
+        <totals>
+          <lines total="12" comments="0" code="12" executable="0" executed="0" percent="0"/>
+          <methods count="0" tested="0" percent="0"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="0" tested="0" percent="0"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+      </file>
+    </directory>
+  </project>
+</phpunit>

@@ -15,11 +15,21 @@
         <server name="SYMFONY_PHPUNIT_VERSION" value="9.5" />
     </php>
 
-    <filter>
-        <whitelist>
-            <directory suffix=".php">src/</directory>
-        </whitelist>
-    </filter>
+    <coverage>
+    <include>
+        <directory suffix=".php">src</directory>
+    </include>
+    <exclude>
+        <directory suffix=".php">src/DataFixtures</directory>
+        <file>/AppFixtures.php</file>
+    </exclude>
+
+    <report>
+        <clover outputFile="clover.xml"/>
+        <html outputDirectory="tests/coverage/html-coverage" lowUpperBound="50" highLowerBound="90"/>
+        <xml outputDirectory="tests/coverage/xml-coverage"/>
+    </report>
+    </coverage>
 
 
     <testsuites>
@@ -27,6 +37,7 @@
             <directory>tests</directory>
         </testsuite>
     </testsuites>
+
 
     <listeners>
         <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener" />

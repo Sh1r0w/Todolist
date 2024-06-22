@@ -24,9 +24,8 @@ class defaultControllerTest extends WebTestCase
 
     public function testDefaultController(): void
     {
-        $this->login('User', 'user');
+        $this->login('Anonyme', 'anon');
         $this->client->request('GET', '/');
-
         $this->assertSelectorTextContains('h1', 'Bienvenue sur Todo List, l\'application vous permettant de gérer l\'ensemble de vos tâches sans effort !');
     }
 }

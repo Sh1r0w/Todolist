@@ -25,7 +25,7 @@ Class UserControllerTest extends WebTestCase
 
     public function testListAction(): void
     {
-        $this->login('User', 'user');
+        $this->login('Anonyme', 'anon');
         $this->client->request('GET', '/user');
         $this->assertEquals('403', $this->client->getResponse()->getStatusCode());
         
@@ -37,7 +37,7 @@ Class UserControllerTest extends WebTestCase
 
     public function testUserCreate(): void
     {   
-        $this->login('User', 'user');
+        $this->login('Anonyme', 'anon');
         $this->client->request('GET', '/users/create');
         $this->assertEquals('403', $this->client->getResponse()->getStatusCode());
 
@@ -59,7 +59,7 @@ Class UserControllerTest extends WebTestCase
 
     public function testEditAction(): void
     {
-        $this->login('User', 'user');
+        $this->login('Anonyme', 'anon');
         $this->client->request('GET', '/users/1/edit');
         $this->assertEquals('403', $this->client->getResponse()->getStatusCode());
         

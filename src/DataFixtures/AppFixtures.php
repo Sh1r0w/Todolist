@@ -25,10 +25,10 @@ class AppFixtures extends Fixture
         $manager->persist($userAdmin);
 
         $user = new User();
-        $user->setUsername('User')
+        $user->setUsername('Anonyme')
                 ->setRoles(["ROLE_USER"])
                 ->setEmail('user@todo.com')
-                ->setPassword($this->userPasswordHasher->hashPassword($userAdmin, "user"));
+                ->setPassword($this->userPasswordHasher->hashPassword($userAdmin, "anon"));
         $manager->persist($user);
         
         $manager->flush();
