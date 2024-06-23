@@ -39,7 +39,7 @@ class UserController extends AbstractController
      * This PHP function creates a new user with admin role, hashes the password, and stores the user
      * in the database upon form submission.
      * 
-     * @param Request request The `` parameter in the `createAction` method is an instance of
+     * @param Request The `request` parameter in the `createAction` method is an instance of
      * the `Request` class in Symfony. It represents an HTTP request and contains information about the
      * request such as the request method, headers, parameters, and more.
      * @param EntityManagerInterface em EntityManagerInterface is an interface in Doctrine that
@@ -112,7 +112,7 @@ class UserController extends AbstractController
      * 'user_list' route. If the form is not submitted or not valid, it will render the
      * 'user/edit.html.twig' template with the form and user data.
      */
-    
+
     #[Route('/users/{id}/edit', name: 'user_edit')]
     #[IsGranted("ROLE_ADMIN")]
     public function editAction(User $user, Request $request, EntityManagerInterface $em, UserPasswordHasherInterface $userPasswordHasher)
