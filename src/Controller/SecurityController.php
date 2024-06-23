@@ -9,6 +9,19 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends AbstractController
 {
+   /**
+    * The function "login" in PHP retrieves the last authentication error and last username entered by
+    * the user for rendering in a login template.
+    * 
+    * @param AuthenticationUtils authenticationUtils The `AuthenticationUtils` service in Symfony is
+    * used to help with common authentication tasks. In the provided code snippet, the
+    * `AuthenticationUtils` service is injected into the `login` method as a parameter.
+    * 
+    * @return Response The `login` method is returning a Response object that renders the
+    * `login.html.twig` template with the last username entered by the user and any login error that
+    * may have occurred. The last username and error are passed to the template as variables
+    * `last_username` and `error`, respectively.
+    */
     #[Route(path: '/login', name: 'login')]
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
@@ -24,6 +37,10 @@ class SecurityController extends AbstractController
         ]);
     }
 
+    /**
+     * The function logout() is a placeholder method that throws a LogicException and is intended to be
+     * intercepted by the logout key on the firewall.
+     */
     #[Route(path: '/logout', name: 'logout')]
     public function logout(): void
     {
