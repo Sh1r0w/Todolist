@@ -2,7 +2,7 @@
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
   <file name="SecurityController.php" path="\Controller">
     <totals>
-      <lines total="33" comments="2" code="31" executable="7" executed="6" percent="85.71"/>
+      <lines total="52" comments="19" code="33" executable="7" executed="6" percent="85.71"/>
       <methods count="2" tested="1" percent="50.00"/>
       <functions count="0" tested="0" percent="0"/>
       <classes count="1" tested="0" percent="0.00"/>
@@ -10,11 +10,11 @@
     </totals>
     <class name="App\Controller\SecurityController" start="10" executable="7" executed="6" crap="2.01">
       <namespace name="App\Controller"/>
-      <method name="login" signature="login(Symfony\Component\Security\Http\Authentication\AuthenticationUtils $authenticationUtils): Symfony\Component\HttpFoundation\Response" start="12" end="25" crap="1" executable="6" executed="6" coverage="100"/>
-      <method name="logout" signature="logout(): void" start="27" end="31" crap="2" executable="1" executed="0" coverage="0"/>
+      <method name="login" signature="login(Symfony\Component\Security\Http\Authentication\AuthenticationUtils $authenticationUtils): Symfony\Component\HttpFoundation\Response" start="26" end="39" crap="1" executable="6" executed="6" coverage="100"/>
+      <method name="logout" signature="logout(): void" start="46" end="50" crap="2" executable="1" executed="0" coverage="0"/>
     </class>
     <coverage>
-      <line nr="16">
+      <line nr="30">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testListTask"/>
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
@@ -23,10 +23,10 @@
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testListAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testUserCreate"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testEditAction"/>
-        <covered by="App\Tests\Fonctionnel\Controller\defaultControllerTest::testDefaultController"/>
-        <covered by="App\Tests\Fonctionnel\Controller\securityControllerTest::testLogout"/>
+        <covered by="App\Tests\Fonctionnel\Controller\DefaultControllerTest::testDefaultController"/>
+        <covered by="App\Tests\Fonctionnel\Controller\SecurityControllerTest::testLogout"/>
       </line>
-      <line nr="19">
+      <line nr="33">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testListTask"/>
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
@@ -35,10 +35,10 @@
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testListAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testUserCreate"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testEditAction"/>
-        <covered by="App\Tests\Fonctionnel\Controller\defaultControllerTest::testDefaultController"/>
-        <covered by="App\Tests\Fonctionnel\Controller\securityControllerTest::testLogout"/>
+        <covered by="App\Tests\Fonctionnel\Controller\DefaultControllerTest::testDefaultController"/>
+        <covered by="App\Tests\Fonctionnel\Controller\SecurityControllerTest::testLogout"/>
       </line>
-      <line nr="21">
+      <line nr="35">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testListTask"/>
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
@@ -47,10 +47,10 @@
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testListAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testUserCreate"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testEditAction"/>
-        <covered by="App\Tests\Fonctionnel\Controller\defaultControllerTest::testDefaultController"/>
-        <covered by="App\Tests\Fonctionnel\Controller\securityControllerTest::testLogout"/>
+        <covered by="App\Tests\Fonctionnel\Controller\DefaultControllerTest::testDefaultController"/>
+        <covered by="App\Tests\Fonctionnel\Controller\SecurityControllerTest::testLogout"/>
       </line>
-      <line nr="22">
+      <line nr="36">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testListTask"/>
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
@@ -59,10 +59,10 @@
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testListAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testUserCreate"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testEditAction"/>
-        <covered by="App\Tests\Fonctionnel\Controller\defaultControllerTest::testDefaultController"/>
-        <covered by="App\Tests\Fonctionnel\Controller\securityControllerTest::testLogout"/>
+        <covered by="App\Tests\Fonctionnel\Controller\DefaultControllerTest::testDefaultController"/>
+        <covered by="App\Tests\Fonctionnel\Controller\SecurityControllerTest::testLogout"/>
       </line>
-      <line nr="23">
+      <line nr="37">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testListTask"/>
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
@@ -71,10 +71,10 @@
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testListAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testUserCreate"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testEditAction"/>
-        <covered by="App\Tests\Fonctionnel\Controller\defaultControllerTest::testDefaultController"/>
-        <covered by="App\Tests\Fonctionnel\Controller\securityControllerTest::testLogout"/>
+        <covered by="App\Tests\Fonctionnel\Controller\DefaultControllerTest::testDefaultController"/>
+        <covered by="App\Tests\Fonctionnel\Controller\SecurityControllerTest::testLogout"/>
       </line>
-      <line nr="24">
+      <line nr="38">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testListTask"/>
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
@@ -83,8 +83,8 @@
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testListAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testUserCreate"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testEditAction"/>
-        <covered by="App\Tests\Fonctionnel\Controller\defaultControllerTest::testDefaultController"/>
-        <covered by="App\Tests\Fonctionnel\Controller\securityControllerTest::testLogout"/>
+        <covered by="App\Tests\Fonctionnel\Controller\DefaultControllerTest::testDefaultController"/>
+        <covered by="App\Tests\Fonctionnel\Controller\SecurityControllerTest::testLogout"/>
       </line>
     </coverage>
     <source>
@@ -137,6 +137,47 @@
         <token name="T_OPEN_CURLY">{</token>
       </line>
       <line no="12">
+        <token name="T_WHITESPACE">   </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="13">
+        <token name="T_DOC_COMMENT">    * The function "login" in PHP retrieves the last authentication error and last username entered by</token>
+      </line>
+      <line no="14">
+        <token name="T_DOC_COMMENT">    * the user for rendering in a login template.</token>
+      </line>
+      <line no="15">
+        <token name="T_DOC_COMMENT">    * </token>
+      </line>
+      <line no="16">
+        <token name="T_DOC_COMMENT">    * @param AuthenticationUtils authenticationUtils The `AuthenticationUtils` service in Symfony is</token>
+      </line>
+      <line no="17">
+        <token name="T_DOC_COMMENT">    * used to help with common authentication tasks. In the provided code snippet, the</token>
+      </line>
+      <line no="18">
+        <token name="T_DOC_COMMENT">    * `AuthenticationUtils` service is injected into the `login` method as a parameter.</token>
+      </line>
+      <line no="19">
+        <token name="T_DOC_COMMENT">    * </token>
+      </line>
+      <line no="20">
+        <token name="T_DOC_COMMENT">    * @return Response The `login` method is returning a Response object that renders the</token>
+      </line>
+      <line no="21">
+        <token name="T_DOC_COMMENT">    * `login.html.twig` template with the last username entered by the user and any login error that</token>
+      </line>
+      <line no="22">
+        <token name="T_DOC_COMMENT">    * may have occurred. The last username and error are passed to the template as variables</token>
+      </line>
+      <line no="23">
+        <token name="T_DOC_COMMENT">    * `last_username` and `error`, respectively.</token>
+      </line>
+      <line no="24">
+        <token name="T_DOC_COMMENT">    */</token>
+      </line>
+      <line no="25"/>
+      <line no="26">
         <token name="T_WHITESPACE">    </token>
         <token name="T_ATTRIBUTE">#[</token>
         <token name="T_STRING">Route</token>
@@ -154,7 +195,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_CLOSE_SQUARE">]</token>
       </line>
-      <line no="13">
+      <line no="27">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -170,15 +211,15 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">Response</token>
       </line>
-      <line no="14">
+      <line no="28">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="15">
+      <line no="29">
         <token name="T_WHITESPACE">        </token>
         <token name="T_COMMENT">// get the login error if there is one</token>
       </line>
-      <line no="16">
+      <line no="30">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$error</token>
         <token name="T_WHITESPACE"> </token>
@@ -191,12 +232,12 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="17"/>
-      <line no="18">
+      <line no="31"/>
+      <line no="32">
         <token name="T_WHITESPACE">        </token>
         <token name="T_COMMENT">// last username entered by the user</token>
       </line>
-      <line no="19">
+      <line no="33">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$lastUsername</token>
         <token name="T_WHITESPACE"> </token>
@@ -209,8 +250,8 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="20"/>
-      <line no="21">
+      <line no="34"/>
+      <line no="35">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -223,7 +264,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_SQUARE">[</token>
       </line>
-      <line no="22">
+      <line no="36">
         <token name="T_WHITESPACE">            </token>
         <token name="T_CONSTANT_ENCAPSED_STRING">'last_username'</token>
         <token name="T_WHITESPACE"> </token>
@@ -232,7 +273,7 @@
         <token name="T_VARIABLE">$lastUsername</token>
         <token name="T_COMMA">,</token>
       </line>
-      <line no="23">
+      <line no="37">
         <token name="T_WHITESPACE">            </token>
         <token name="T_CONSTANT_ENCAPSED_STRING">'error'</token>
         <token name="T_WHITESPACE"> </token>
@@ -241,18 +282,34 @@
         <token name="T_VARIABLE">$error</token>
         <token name="T_COMMA">,</token>
       </line>
-      <line no="24">
+      <line no="38">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_SQUARE">]</token>
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="25">
+      <line no="39">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="26"/>
-      <line no="27">
+      <line no="40"/>
+      <line no="41">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="42">
+        <token name="T_DOC_COMMENT">     * The function logout() is a placeholder method that throws a LogicException and is intended to be</token>
+      </line>
+      <line no="43">
+        <token name="T_DOC_COMMENT">     * intercepted by the logout key on the firewall.</token>
+      </line>
+      <line no="44">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="45">
+        <token name="T_WHITESPACE">    </token>
+      </line>
+      <line no="46">
         <token name="T_WHITESPACE">    </token>
         <token name="T_ATTRIBUTE">#[</token>
         <token name="T_STRING">Route</token>
@@ -270,7 +327,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_CLOSE_SQUARE">]</token>
       </line>
-      <line no="28">
+      <line no="47">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -283,11 +340,11 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">void</token>
       </line>
-      <line no="29">
+      <line no="48">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="30">
+      <line no="49">
         <token name="T_WHITESPACE">        </token>
         <token name="T_THROW">throw</token>
         <token name="T_WHITESPACE"> </token>
@@ -299,14 +356,14 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="31">
+      <line no="50">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="32">
+      <line no="51">
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="33"/>
+      <line no="52"/>
     </source>
   </file>
 </phpunit>

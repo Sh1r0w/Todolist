@@ -22,6 +22,7 @@ class SecurityController extends AbstractController
     * may have occurred. The last username and error are passed to the template as variables
     * `last_username` and `error`, respectively.
     */
+
     #[Route(path: '/login', name: 'login')]
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
@@ -41,6 +42,7 @@ class SecurityController extends AbstractController
      * The function logout() is a placeholder method that throws a LogicException and is intended to be
      * intercepted by the logout key on the firewall.
      */
+    
     #[Route(path: '/logout', name: 'logout')]
     public function logout(): void
     {

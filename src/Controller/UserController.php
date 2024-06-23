@@ -27,13 +27,13 @@ class UserController extends AbstractController
      * array of all users retrieved from the database using the `findAll()` method of the `User` entity
      * repository.
      */
+
     #[Route('/user', name: 'user_list')]
     #[IsGranted("ROLE_ADMIN")]
     public function listAction(EntityManagerInterface $em)
     {
         return $this->render('user/list.html.twig', ['users' => $em->getRepository(User::class)->findAll()]);
     }
-
 
     /**
      * This PHP function creates a new user with admin role, hashes the password, and stores the user
@@ -56,6 +56,7 @@ class UserController extends AbstractController
      * flash message will be displayed, and the user will be redirected to the 'user_list' route. If
      * the form is not submitted or not valid, the create form view will be rendered with the form.
      */
+
     #[Route('/users/create', name: 'user_create')]
     #[IsGranted("ROLE_ADMIN")]
     public function createAction(Request $request, EntityManagerInterface $em, UserPasswordHasherInterface $userPasswordHasher)
@@ -111,6 +112,7 @@ class UserController extends AbstractController
      * 'user_list' route. If the form is not submitted or not valid, it will render the
      * 'user/edit.html.twig' template with the form and user data.
      */
+    
     #[Route('/users/{id}/edit', name: 'user_edit')]
     #[IsGranted("ROLE_ADMIN")]
     public function editAction(User $user, Request $request, EntityManagerInterface $em, UserPasswordHasherInterface $userPasswordHasher)

@@ -23,8 +23,8 @@
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testListAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testUserCreate"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testEditAction"/>
-        <covered by="App\Tests\Fonctionnel\Controller\defaultControllerTest::testDefaultController"/>
-        <covered by="App\Tests\Fonctionnel\Controller\securityControllerTest::testLogout"/>
+        <covered by="App\Tests\Fonctionnel\Controller\DefaultControllerTest::testDefaultController"/>
+        <covered by="App\Tests\Fonctionnel\Controller\SecurityControllerTest::testLogout"/>
         <covered by="App\tests\Fonctionnel\Repository\UserRepositoryTest::testUserRepo"/>
         <covered by="App\tests\Fonctionnel\Repository\UserRepositoryTest::testUpdatePassword"/>
         <covered by="App\tests\Fonctionnel\Repository\UserRepositoryTest::testUpgradePasswordError"/>

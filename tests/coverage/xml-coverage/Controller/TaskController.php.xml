@@ -2,7 +2,7 @@
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
   <file name="TaskController.php" path="\Controller">
     <totals>
-      <lines total="99" comments="0" code="99" executable="37" executed="36" percent="97.30"/>
+      <lines total="182" comments="81" code="101" executable="37" executed="36" percent="97.30"/>
       <methods count="5" tested="4" percent="80.00"/>
       <functions count="0" tested="0" percent="0"/>
       <classes count="1" tested="0" percent="0.00"/>
@@ -10,123 +10,123 @@
     </totals>
     <class name="App\Controller\TaskController" start="14" executable="37" executed="36" crap="11">
       <namespace name="App\Controller"/>
-      <method name="listAction" signature="listAction(Doctrine\ORM\EntityManagerInterface $em)" start="18" end="22" crap="1" executable="1" executed="1" coverage="100"/>
-      <method name="createAction" signature="createAction(Symfony\Component\HttpFoundation\Request $request, Doctrine\ORM\EntityManagerInterface $em)" start="25" end="46" crap="3" executable="13" executed="13" coverage="100"/>
-      <method name="editAction" signature="editAction(App\Entity\Task $task, Symfony\Component\HttpFoundation\Request $request, Doctrine\ORM\EntityManagerInterface $em)" start="49" end="67" crap="3" executable="10" executed="10" coverage="100"/>
-      <method name="toggleTaskAction" signature="toggleTaskAction(App\Entity\Task $task, Doctrine\ORM\EntityManagerInterface $em)" start="69" end="78" crap="1" executable="4" executed="4" coverage="100"/>
-      <method name="deleteTaskAction" signature="deleteTaskAction(App\Entity\Task $task, Doctrine\ORM\EntityManagerInterface $em)" start="80" end="97" crap="3.01" executable="9" executed="8" coverage="88.888888888889"/>
+      <method name="listAction" signature="listAction(Doctrine\ORM\EntityManagerInterface $em)" start="32" end="36" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="createAction" signature="createAction(Symfony\Component\HttpFoundation\Request $request, Doctrine\ORM\EntityManagerInterface $em)" start="56" end="77" crap="3" executable="13" executed="13" coverage="100"/>
+      <method name="editAction" signature="editAction(App\Entity\Task $task, Symfony\Component\HttpFoundation\Request $request, Doctrine\ORM\EntityManagerInterface $em)" start="100" end="118" crap="3" executable="10" executed="10" coverage="100"/>
+      <method name="toggleTaskAction" signature="toggleTaskAction(App\Entity\Task $task, Doctrine\ORM\EntityManagerInterface $em)" start="136" end="145" crap="1" executable="4" executed="4" coverage="100"/>
+      <method name="deleteTaskAction" signature="deleteTaskAction(App\Entity\Task $task, Doctrine\ORM\EntityManagerInterface $em)" start="163" end="180" crap="3.01" executable="9" executed="8" coverage="88.888888888889"/>
     </class>
     <coverage>
-      <line nr="21">
+      <line nr="35">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testListTask"/>
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testToggleTaskAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testDeleteTaskAction"/>
       </line>
-      <line nr="28">
+      <line nr="59">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
-      </line>
-      <line nr="29">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
-      </line>
-      <line nr="30">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
-      </line>
-      <line nr="31">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
-      </line>
-      <line nr="32">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
-      </line>
-      <line nr="34">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
-      </line>
-      <line nr="36">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
-      </line>
-      <line nr="37">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
-      </line>
-      <line nr="38">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
-      </line>
-      <line nr="39">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
-      </line>
-      <line nr="41">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
-      </line>
-      <line nr="43">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
-      </line>
-      <line nr="45">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
-      </line>
-      <line nr="52">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
-      </line>
-      <line nr="53">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
-      </line>
-      <line nr="55">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
-      </line>
-      <line nr="56">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
-      </line>
-      <line nr="58">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
       </line>
       <line nr="60">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
+      </line>
+      <line nr="61">
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
+      </line>
+      <line nr="62">
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
       </line>
       <line nr="63">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
-      </line>
-      <line nr="64">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
       </line>
       <line nr="65">
-        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
+      </line>
+      <line nr="67">
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
+      </line>
+      <line nr="68">
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
+      </line>
+      <line nr="69">
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
+      </line>
+      <line nr="70">
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
       </line>
       <line nr="72">
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
+      </line>
+      <line nr="74">
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
+      </line>
+      <line nr="76">
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testCreateAction"/>
+      </line>
+      <line nr="103">
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
+      </line>
+      <line nr="104">
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
+      </line>
+      <line nr="106">
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
+      </line>
+      <line nr="107">
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
+      </line>
+      <line nr="109">
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
+      </line>
+      <line nr="111">
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
+      </line>
+      <line nr="114">
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
+      </line>
+      <line nr="115">
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
+      </line>
+      <line nr="116">
+        <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
+      </line>
+      <line nr="139">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testToggleTaskAction"/>
       </line>
-      <line nr="73">
+      <line nr="140">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testToggleTaskAction"/>
       </line>
-      <line nr="75">
+      <line nr="142">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testToggleTaskAction"/>
       </line>
-      <line nr="77">
+      <line nr="144">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testToggleTaskAction"/>
       </line>
-      <line nr="83">
+      <line nr="166">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testDeleteTaskAction"/>
       </line>
-      <line nr="84">
+      <line nr="167">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testDeleteTaskAction"/>
       </line>
-      <line nr="85">
+      <line nr="168">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testDeleteTaskAction"/>
       </line>
-      <line nr="87">
+      <line nr="170">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testDeleteTaskAction"/>
       </line>
-      <line nr="88">
+      <line nr="171">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testDeleteTaskAction"/>
       </line>
-      <line nr="89">
+      <line nr="172">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testDeleteTaskAction"/>
       </line>
-      <line nr="91">
+      <line nr="174">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testDeleteTaskAction"/>
       </line>
-      <line nr="96">
+      <line nr="179">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testDeleteTaskAction"/>
       </line>
-      <line nr="66">
+      <line nr="117">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testEditAction"/>
       </line>
     </coverage>
@@ -204,9 +204,52 @@
         <token name="T_OPEN_CURLY">{</token>
       </line>
       <line no="16"/>
-      <line no="17"/>
+      <line no="17">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
       <line no="18">
-        <token name="T_WHITESPACE">     </token>
+        <token name="T_DOC_COMMENT">     * The above PHP code defines two Symfony controller actions for listing tasks and creating a new</token>
+      </line>
+      <line no="19">
+        <token name="T_DOC_COMMENT">     * task, including form handling and database interaction.</token>
+      </line>
+      <line no="20">
+        <token name="T_DOC_COMMENT">     * </token>
+      </line>
+      <line no="21">
+        <token name="T_DOC_COMMENT">     * @param EntityManagerInterface em The `em` parameter in the Symfony controller actions refers to</token>
+      </line>
+      <line no="22">
+        <token name="T_DOC_COMMENT">     * the `EntityManagerInterface` service, which is responsible for managing your entities and their</token>
+      </line>
+      <line no="23">
+        <token name="T_DOC_COMMENT">     * relationships in the database. It allows you to perform operations like persisting, updating,</token>
+      </line>
+      <line no="24">
+        <token name="T_DOC_COMMENT">     * and deleting entities.</token>
+      </line>
+      <line no="25">
+        <token name="T_DOC_COMMENT">     * </token>
+      </line>
+      <line no="26">
+        <token name="T_DOC_COMMENT">     * @return In the provided code snippet, the `createAction` method is returning a response based on</token>
+      </line>
+      <line no="27">
+        <token name="T_DOC_COMMENT">     * the form submission and validation process. If the form is submitted and valid, a new task is</token>
+      </line>
+      <line no="28">
+        <token name="T_DOC_COMMENT">     * created, associated with the current user, and persisted to the database. A success flash</token>
+      </line>
+      <line no="29">
+        <token name="T_DOC_COMMENT">     * message is added, and the user is redirected to the `task_list` route.</token>
+      </line>
+      <line no="30">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="31"/>
+      <line no="32">
+        <token name="T_WHITESPACE">    </token>
         <token name="T_ATTRIBUTE">#[</token>
         <token name="T_STRING">Route</token>
         <token name="T_OPEN_BRACKET">(</token>
@@ -220,7 +263,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_CLOSE_SQUARE">]</token>
       </line>
-      <line no="19">
+      <line no="33">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -233,11 +276,11 @@
         <token name="T_VARIABLE">$em</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="20">
+      <line no="34">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="21">
+      <line no="35">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -269,14 +312,66 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="22">
+      <line no="36">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="23"/>
-      <line no="24"/>
-      <line no="25">
-        <token name="T_WHITESPACE">     </token>
+      <line no="37"/>
+      <line no="38">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="39">
+        <token name="T_DOC_COMMENT">     * This PHP function creates a new task entity, associates it with the current user, and saves it</token>
+      </line>
+      <line no="40">
+        <token name="T_DOC_COMMENT">     * to the database if the form submission is valid.</token>
+      </line>
+      <line no="41">
+        <token name="T_DOC_COMMENT">     * </token>
+      </line>
+      <line no="42">
+        <token name="T_DOC_COMMENT">     * @param Request request The `` parameter in the `createAction` method is an instance of</token>
+      </line>
+      <line no="43">
+        <token name="T_DOC_COMMENT">     * the `Request` class in Symfony. It represents an HTTP request and contains information about the</token>
+      </line>
+      <line no="44">
+        <token name="T_DOC_COMMENT">     * request such as the request method, headers, parameters, and more.</token>
+      </line>
+      <line no="45">
+        <token name="T_DOC_COMMENT">     * @param EntityManagerInterface em The "em" parameter in the code snippet stands for</token>
+      </line>
+      <line no="46">
+        <token name="T_DOC_COMMENT">     * EntityManagerInterface. It is used for managing entities in Doctrine, which is an</token>
+      </line>
+      <line no="47">
+        <token name="T_DOC_COMMENT">     * object-relational mapping (ORM) tool for PHP. The EntityManagerInterface allows you to interact</token>
+      </line>
+      <line no="48">
+        <token name="T_DOC_COMMENT">     * with the database by performing operations such as persisting entities, flushing changes to the</token>
+      </line>
+      <line no="49">
+        <token name="T_DOC_COMMENT">     * </token>
+      </line>
+      <line no="50">
+        <token name="T_DOC_COMMENT">     * @return If the form is submitted and valid, the function will redirect to the 'task_list' route</token>
+      </line>
+      <line no="51">
+        <token name="T_DOC_COMMENT">     * after adding the task to the database and displaying a success flash message. If the form is not</token>
+      </line>
+      <line no="52">
+        <token name="T_DOC_COMMENT">     * submitted or not valid, the function will render the 'task/create.html.twig' template with the</token>
+      </line>
+      <line no="53">
+        <token name="T_DOC_COMMENT">     * form.</token>
+      </line>
+      <line no="54">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="55"/>
+      <line no="56">
+        <token name="T_WHITESPACE">    </token>
         <token name="T_ATTRIBUTE">#[</token>
         <token name="T_STRING">Route</token>
         <token name="T_OPEN_BRACKET">(</token>
@@ -290,7 +385,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_CLOSE_SQUARE">]</token>
       </line>
-      <line no="26">
+      <line no="57">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -308,11 +403,11 @@
         <token name="T_VARIABLE">$em</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="27">
+      <line no="58">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="28">
+      <line no="59">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$task</token>
         <token name="T_WHITESPACE"> </token>
@@ -325,7 +420,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="29">
+      <line no="60">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$form</token>
         <token name="T_WHITESPACE"> </token>
@@ -344,7 +439,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="30">
+      <line no="61">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$user</token>
         <token name="T_WHITESPACE"> </token>
@@ -361,7 +456,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="31">
+      <line no="62">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$idUs</token>
         <token name="T_WHITESPACE"> </token>
@@ -388,7 +483,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="32">
+      <line no="63">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$form</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -398,8 +493,8 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="33"/>
-      <line no="34">
+      <line no="64"/>
+      <line no="65">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -421,8 +516,8 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="35"/>
-      <line no="36">
+      <line no="66"/>
+      <line no="67">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$task</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -431,8 +526,8 @@
         <token name="T_VARIABLE">$idUs</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="37">
-        <token name="T_WHITESPACE">                 </token>
+      <line no="68">
+        <token name="T_WHITESPACE">                </token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
         <token name="T_STRING">setCreatedAt</token>
         <token name="T_OPEN_BRACKET">(</token>
@@ -444,7 +539,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="38">
+      <line no="69">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$em</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -454,7 +549,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="39">
+      <line no="70">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$em</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -463,8 +558,8 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="40"/>
-      <line no="41">
+      <line no="71"/>
+      <line no="72">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -477,8 +572,8 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="42"/>
-      <line no="43">
+      <line no="73"/>
+      <line no="74">
         <token name="T_WHITESPACE">            </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -490,11 +585,11 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="44">
+      <line no="75">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="45">
+      <line no="76">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -519,14 +614,75 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="46">
+      <line no="77">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="47"/>
-      <line no="48"/>
-      <line no="49">
-        <token name="T_WHITESPACE">     </token>
+      <line no="78"/>
+      <line no="79">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="80">
+        <token name="T_DOC_COMMENT">     * This PHP function handles the editing of a task entity, displaying a form to update the task and</token>
+      </line>
+      <line no="81">
+        <token name="T_DOC_COMMENT">     * saving the changes if the form is submitted and valid.</token>
+      </line>
+      <line no="82">
+        <token name="T_DOC_COMMENT">     * </token>
+      </line>
+      <line no="83">
+        <token name="T_DOC_COMMENT">     * @param Task task The `` parameter in the `editAction` method represents the task entity</token>
+      </line>
+      <line no="84">
+        <token name="T_DOC_COMMENT">     * that is being edited. It is passed as an argument to the controller action when a user accesses</token>
+      </line>
+      <line no="85">
+        <token name="T_DOC_COMMENT">     * the edit task route with a specific task ID.</token>
+      </line>
+      <line no="86">
+        <token name="T_DOC_COMMENT">     * @param Request request The `` parameter in the `editAction` method represents the HTTP</token>
+      </line>
+      <line no="87">
+        <token name="T_DOC_COMMENT">     * request that is being made to the server. It contains information such as the request method</token>
+      </line>
+      <line no="88">
+        <token name="T_DOC_COMMENT">     * (GET, POST, etc.), request headers, request parameters, and more. In this context, the</token>
+      </line>
+      <line no="89">
+        <token name="T_DOC_COMMENT">     * `` parameter is used to</token>
+      </line>
+      <line no="90">
+        <token name="T_DOC_COMMENT">     * @param EntityManagerInterface em The "em" parameter in the code snippet stands for</token>
+      </line>
+      <line no="91">
+        <token name="T_DOC_COMMENT">     * EntityManagerInterface. It is used for managing entities in Doctrine ORM (Object-Relational</token>
+      </line>
+      <line no="92">
+        <token name="T_DOC_COMMENT">     * Mapping) within a Symfony application. The EntityManagerInterface allows you to perform</token>
+      </line>
+      <line no="93">
+        <token name="T_DOC_COMMENT">     * operations such as persisting, updating, and deleting entities in the database. In the context</token>
+      </line>
+      <line no="94">
+        <token name="T_DOC_COMMENT">     * </token>
+      </line>
+      <line no="95">
+        <token name="T_DOC_COMMENT">     * @return If the form is submitted and valid, the function will return a redirect response to the</token>
+      </line>
+      <line no="96">
+        <token name="T_DOC_COMMENT">     * 'task_list' route. Otherwise, it will return a rendered template for the 'task/edit.html.twig'</token>
+      </line>
+      <line no="97">
+        <token name="T_DOC_COMMENT">     * with the form and task variables passed to it.</token>
+      </line>
+      <line no="98">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="99"/>
+      <line no="100">
+        <token name="T_WHITESPACE">    </token>
         <token name="T_ATTRIBUTE">#[</token>
         <token name="T_STRING">Route</token>
         <token name="T_OPEN_BRACKET">(</token>
@@ -540,7 +696,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_CLOSE_SQUARE">]</token>
       </line>
-      <line no="50">
+      <line no="101">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -557,16 +713,17 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$request</token>
         <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">EntityManagerInterface</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$em</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="51">
+      <line no="102">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="52">
+      <line no="103">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$form</token>
         <token name="T_WHITESPACE"> </token>
@@ -585,7 +742,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="53">
+      <line no="104">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$form</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -595,8 +752,8 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="54"/>
-      <line no="55">
+      <line no="105"/>
+      <line no="106">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -618,7 +775,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="56">
+      <line no="107">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$em</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -627,8 +784,8 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="57"/>
-      <line no="58">
+      <line no="108"/>
+      <line no="109">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -641,8 +798,8 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="59"/>
-      <line no="60">
+      <line no="110"/>
+      <line no="111">
         <token name="T_WHITESPACE">            </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -654,14 +811,12 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="61">
+      <line no="112">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="62">
-        <token name="T_WHITESPACE">    </token>
-      </line>
-      <line no="63">
+      <line no="113"/>
+      <line no="114">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -674,7 +829,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_SQUARE">[</token>
       </line>
-      <line no="64">
+      <line no="115">
         <token name="T_WHITESPACE">            </token>
         <token name="T_CONSTANT_ENCAPSED_STRING">'form'</token>
         <token name="T_WHITESPACE"> </token>
@@ -687,7 +842,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_COMMA">,</token>
       </line>
-      <line no="65">
+      <line no="116">
         <token name="T_WHITESPACE">            </token>
         <token name="T_CONSTANT_ENCAPSED_STRING">'task'</token>
         <token name="T_WHITESPACE"> </token>
@@ -696,19 +851,66 @@
         <token name="T_VARIABLE">$task</token>
         <token name="T_COMMA">,</token>
       </line>
-      <line no="66">
+      <line no="117">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_SQUARE">]</token>
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="67">
+      <line no="118">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="68"/>
-      <line no="69">
-        <token name="T_WHITESPACE">     </token>
+      <line no="119"/>
+      <line no="120">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="121">
+        <token name="T_DOC_COMMENT">     * The function `toggleTaskAction` toggles the completion status of a task and displays a success</token>
+      </line>
+      <line no="122">
+        <token name="T_DOC_COMMENT">     * message before redirecting to the task list page.</token>
+      </line>
+      <line no="123">
+        <token name="T_DOC_COMMENT">     * </token>
+      </line>
+      <line no="124">
+        <token name="T_DOC_COMMENT">     * @param Task task The `` parameter in the `toggleTaskAction` method represents an instance</token>
+      </line>
+      <line no="125">
+        <token name="T_DOC_COMMENT">     * of the `Task` entity. This entity likely contains information about a specific task in your</token>
+      </line>
+      <line no="126">
+        <token name="T_DOC_COMMENT">     * application, such as its title, status (done or not done), and any other relevant details.</token>
+      </line>
+      <line no="127">
+        <token name="T_DOC_COMMENT">     * @param EntityManagerInterface em The "em" parameter in the code snippet stands for</token>
+      </line>
+      <line no="128">
+        <token name="T_DOC_COMMENT">     * EntityManagerInterface. In Symfony, EntityManagerInterface is an interface that defines the</token>
+      </line>
+      <line no="129">
+        <token name="T_DOC_COMMENT">     * methods for managing entities in the Doctrine ORM (Object-Relational Mapping) system. It</token>
+      </line>
+      <line no="130">
+        <token name="T_DOC_COMMENT">     * provides methods for persisting, removing, and flushing entities to the database.</token>
+      </line>
+      <line no="131">
+        <token name="T_DOC_COMMENT">     * </token>
+      </line>
+      <line no="132">
+        <token name="T_DOC_COMMENT">     * @return The code snippet is returning a redirection to the route named 'task_list' after</token>
+      </line>
+      <line no="133">
+        <token name="T_DOC_COMMENT">     * toggling the status of a task.</token>
+      </line>
+      <line no="134">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="135"/>
+      <line no="136">
+        <token name="T_WHITESPACE">    </token>
         <token name="T_ATTRIBUTE">#[</token>
         <token name="T_STRING">Route</token>
         <token name="T_OPEN_BRACKET">(</token>
@@ -722,7 +924,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_CLOSE_SQUARE">]</token>
       </line>
-      <line no="70">
+      <line no="137">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -740,11 +942,11 @@
         <token name="T_VARIABLE">$em</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="71">
+      <line no="138">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="72">
+      <line no="139">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$task</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -759,7 +961,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="73">
+      <line no="140">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$em</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -768,8 +970,8 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="74"/>
-      <line no="75">
+      <line no="141"/>
+      <line no="142">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -792,8 +994,8 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="76"/>
-      <line no="77">
+      <line no="143"/>
+      <line no="144">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -805,13 +1007,62 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="78">
+      <line no="145">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="79"/>
-      <line no="80">
-        <token name="T_WHITESPACE">     </token>
+      <line no="146"/>
+      <line no="147">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="148">
+        <token name="T_DOC_COMMENT">     * This PHP function deletes a task if the current user is the owner of the task or has a specific</token>
+      </line>
+      <line no="149">
+        <token name="T_DOC_COMMENT">     * role, otherwise it displays an error message.</token>
+      </line>
+      <line no="150">
+        <token name="T_DOC_COMMENT">     * </token>
+      </line>
+      <line no="151">
+        <token name="T_DOC_COMMENT">     * @param Task task The `deleteTaskAction` method takes two parameters: `` of type `Task` and</token>
+      </line>
+      <line no="152">
+        <token name="T_DOC_COMMENT">     * `` of type `EntityManagerInterface`.</token>
+      </line>
+      <line no="153">
+        <token name="T_DOC_COMMENT">     * @param EntityManagerInterface em The "em" parameter in the deleteTaskAction method is an</token>
+      </line>
+      <line no="154">
+        <token name="T_DOC_COMMENT">     * instance of EntityManagerInterface. It is used to interact with the database, specifically for</token>
+      </line>
+      <line no="155">
+        <token name="T_DOC_COMMENT">     * removing the task entity from the database using the remove() method and then persisting the</token>
+      </line>
+      <line no="156">
+        <token name="T_DOC_COMMENT">     * changes using the flush() method.</token>
+      </line>
+      <line no="157">
+        <token name="T_DOC_COMMENT">     * </token>
+      </line>
+      <line no="158">
+        <token name="T_DOC_COMMENT">     * @return If the condition ` ===  || isset([0])` is true, the task will</token>
+      </line>
+      <line no="159">
+        <token name="T_DOC_COMMENT">     * be deleted from the database, a success flash message 'La t&#xE2;che a bien &#xE9;t&#xE9; supprim&#xE9;e.' will be</token>
+      </line>
+      <line no="160">
+        <token name="T_DOC_COMMENT">     * added, and the user will be redirected to the 'task_list' route.</token>
+      </line>
+      <line no="161">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="162">
+        <token name="T_WHITESPACE">    </token>
+      </line>
+      <line no="163">
+        <token name="T_WHITESPACE">    </token>
         <token name="T_ATTRIBUTE">#[</token>
         <token name="T_STRING">Route</token>
         <token name="T_OPEN_BRACKET">(</token>
@@ -825,7 +1076,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_CLOSE_SQUARE">]</token>
       </line>
-      <line no="81">
+      <line no="164">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -843,12 +1094,12 @@
         <token name="T_VARIABLE">$em</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="82">
+      <line no="165">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="83">
-        <token name="T_WHITESPACE">            </token>
+      <line no="166">
+        <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$idUserTask</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_EQUAL">=</token>
@@ -862,11 +1113,10 @@
         <token name="T_STRING">getId</token>
         <token name="T_OPEN_BRACKET">(</token>
         <token name="T_CLOSE_BRACKET">)</token>
-        <token name="T_WHITESPACE"> </token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="84">
-        <token name="T_WHITESPACE">            </token>
+      <line no="167">
+        <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$idUser</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_EQUAL">=</token>
@@ -882,8 +1132,8 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="85">
-        <token name="T_WHITESPACE">            </token>
+      <line no="168">
+        <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$userRole</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_EQUAL">=</token>
@@ -899,10 +1149,11 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="86"/>
-      <line no="87">
+      <line no="169"/>
+      <line no="170">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_BRACKET">(</token>
         <token name="T_VARIABLE">$idUserTask</token>
         <token name="T_WHITESPACE"> </token>
@@ -920,10 +1171,11 @@
         <token name="T_CLOSE_SQUARE">]</token>
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="88">
-        <token name="T_WHITESPACE">        </token>
+      <line no="171">
+        <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$em</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
         <token name="T_STRING">remove</token>
@@ -932,8 +1184,8 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="89">
-        <token name="T_WHITESPACE">        </token>
+      <line no="172">
+        <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$em</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
         <token name="T_STRING">flush</token>
@@ -941,9 +1193,9 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="90"/>
-      <line no="91">
-        <token name="T_WHITESPACE">        </token>
+      <line no="173"/>
+      <line no="174">
+        <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
         <token name="T_STRING">addFlash</token>
@@ -955,16 +1207,16 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="92">
-        <token name="T_WHITESPACE">    </token>
+      <line no="175">
+        <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_ELSE">else</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="93">
-        <token name="T_WHITESPACE">        </token>
+      <line no="176">
+        <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
         <token name="T_STRING">addFlash</token>
@@ -976,14 +1228,12 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="94">
-        <token name="T_WHITESPACE">    </token>
+      <line no="177">
+        <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="95">
-        <token name="T_WHITESPACE">    </token>
-      </line>
-      <line no="96">
+      <line no="178"/>
+      <line no="179">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -995,14 +1245,14 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="97">
+      <line no="180">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="98">
+      <line no="181">
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="99"/>
+      <line no="182"/>
     </source>
   </file>
 </phpunit>

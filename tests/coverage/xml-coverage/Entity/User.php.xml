@@ -64,7 +64,7 @@
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testListAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testUserCreate"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testEditAction"/>
-        <covered by="App\Tests\Fonctionnel\Controller\defaultControllerTest::testDefaultController"/>
+        <covered by="App\Tests\Fonctionnel\Controller\DefaultControllerTest::testDefaultController"/>
       </line>
       <line nr="76">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testListTask"/>
@@ -75,7 +75,7 @@
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testListAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testUserCreate"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testEditAction"/>
-        <covered by="App\Tests\Fonctionnel\Controller\defaultControllerTest::testDefaultController"/>
+        <covered by="App\Tests\Fonctionnel\Controller\DefaultControllerTest::testDefaultController"/>
       </line>
       <line nr="78">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testListTask"/>
@@ -86,7 +86,7 @@
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testListAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testUserCreate"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testEditAction"/>
-        <covered by="App\Tests\Fonctionnel\Controller\defaultControllerTest::testDefaultController"/>
+        <covered by="App\Tests\Fonctionnel\Controller\DefaultControllerTest::testDefaultController"/>
       </line>
       <line nr="80">
         <covered by="App\Tests\Fonctionnel\Controller\TaskControllerTest::testListTask"/>
@@ -97,7 +97,7 @@
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testListAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testUserCreate"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testEditAction"/>
-        <covered by="App\Tests\Fonctionnel\Controller\defaultControllerTest::testDefaultController"/>
+        <covered by="App\Tests\Fonctionnel\Controller\DefaultControllerTest::testDefaultController"/>
       </line>
       <line nr="88">
         <covered by="App\tests\Fonctionnel\Repository\TaskRepositoryTest::testTaskRepo"/>
@@ -120,7 +120,7 @@
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testListAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testUserCreate"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testEditAction"/>
-        <covered by="App\Tests\Fonctionnel\Controller\defaultControllerTest::testDefaultController"/>
+        <covered by="App\Tests\Fonctionnel\Controller\DefaultControllerTest::testDefaultController"/>
         <covered by="App\tests\Fonctionnel\Repository\UserRepositoryTest::testUpdatePassword"/>
       </line>
       <line nr="103">
@@ -150,7 +150,7 @@
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testListAction"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testUserCreate"/>
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testEditAction"/>
-        <covered by="App\Tests\Fonctionnel\Controller\defaultControllerTest::testDefaultController"/>
+        <covered by="App\Tests\Fonctionnel\Controller\DefaultControllerTest::testDefaultController"/>
       </line>
       <line nr="119">
         <covered by="App\Tests\Fonctionnel\Controller\UserControllerTest::testListAction"/>
