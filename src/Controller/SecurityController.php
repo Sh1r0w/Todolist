@@ -11,8 +11,7 @@ class SecurityController extends AbstractController
 {
     /**
     * The function "login" in PHP retrieves the last authentication error and last username entered by
-    * the user for rendering in a login template.
-    * 
+    * the user for rendering in a login template.    * 
     * @param AuthenticationUtils The `authenticationUtils` service in Symfony is
     * used to help with common authentication tasks. In the provided code snippet, the
     * `AuthenticationUtils` service is injected into the `login` method as a parameter.
@@ -43,7 +42,6 @@ class SecurityController extends AbstractController
      * 
      * @return Void
      */
-
      
     #[Route(path: '/logout', name: 'logout')]
     public function logout(): void
