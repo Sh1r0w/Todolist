@@ -6,28 +6,15 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class UserControllerTest extends WebTestCase
 {
-
     private $client;
-
-    /**
-     * The setUp function is used in PHP unit testing to initialize the client for testing purposes.
-     */
 
     public function setUp(): void
     {
-        $this->client = static::createClient();
-    }
 
-    /**
-     * The login function in PHP sends a POST request with login credentials to a login form.
-     * 
-     * @param login The `login` function you provided seems to be a part of a PHP class or script that
-     * handles a login process. It appears to be using Symfony's DomCrawler component to interact with
-     * web pages.
-     * @param password The `login` function you provided seems to be a part of a PHP class or script
-     * that handles user login functionality. It appears to be using Symfony's web crawler component to
-     * simulate a form submission for logging in.
-     */
+        $this->client = static::createClient();
+
+
+    }
 
     public function login($login, $password): void
     {
@@ -35,11 +22,6 @@ class UserControllerTest extends WebTestCase
         $form = $crawler->selectButton('Se connecter')->form();
         $this->client->submit($form, ['_username' => $login, '_password' => $password]);
     }
-
-    /**
-     * The function `testListAction` tests the access control for listing users based on different user
-     * roles.
-     */
 
     public function testListAction(): void
     {
@@ -52,11 +34,6 @@ class UserControllerTest extends WebTestCase
         $this->client->request('GET', '/user');
         $this->assertEquals('200', $this->client->getResponse()->getStatusCode());
     }
-
-    /**
-     * The testUserCreate function tests the user creation process by logging in with different roles,
-     * submitting a form to create a new user, and asserting the success message.
-     */
 
     public function testUserCreate(): void
     {
@@ -80,11 +57,6 @@ class UserControllerTest extends WebTestCase
 
     }
 
-    /**
-     * The testEditAction function tests the editing functionality for a user account in a PHP
-     * application.
-     */
-    
     public function testEditAction(): void
     {
         $this->login('Anonyme', 'anon');

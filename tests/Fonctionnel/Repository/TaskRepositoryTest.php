@@ -11,7 +11,6 @@ use Liip\TestFixturesBundle\Services\DatabaseTools\AbstractDatabaseTool;
 
 class TaskRepositoryTest extends KernelTestCase
 {
-
     /**
      * @var AbstractDatabaseTool
      */
@@ -19,10 +18,6 @@ class TaskRepositoryTest extends KernelTestCase
     protected $databaseTool;
 
     protected $em;
-
-    /**
-     * The setUp function initializes the database tool and entity manager for testing purposes.
-     */
 
     public function setUp(): void
     {
@@ -33,10 +28,6 @@ class TaskRepositoryTest extends KernelTestCase
         $this->em = static::getContainer()->get(EntityManagerInterface::class);
     }
 
-
-    /**
-     * This PHP function tests the TaskRepository by loading fixtures and checking the count of tasks.
-     */
 
     #[DependsExternal('App\tests\Fonctionnel\Repository\UserRepositoryTest', 'testUserRepo')]
     public function testTaskRepo(): void
@@ -52,11 +43,6 @@ class TaskRepositoryTest extends KernelTestCase
 
     }
 
-    /**
-     * The tearDown function in PHP is used to clean up resources and unset variables after a test has
-     * been executed.
-     */
-    
     protected function tearDown(): void
     {
 

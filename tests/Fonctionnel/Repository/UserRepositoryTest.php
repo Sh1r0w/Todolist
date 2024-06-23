@@ -17,7 +17,6 @@ class UserRepositoryTest extends KernelTestCase
     /**
      * @var AbstractDatabaseTool
      */
-
     protected $databaseTool;
 
     protected $em;
@@ -25,11 +24,6 @@ class UserRepositoryTest extends KernelTestCase
     private $user;
 
     private $repo;
-
-    /**
-     * The setUp function initializes database tools, entity manager, and user repository for testing
-     * purposes.
-     */
 
     public function setUp(): void
     {
@@ -43,10 +37,6 @@ class UserRepositoryTest extends KernelTestCase
         $this->repo = static::getContainer()->get(UserRepository::class);
     }
 
-    /**
-     * The function `testUserRepo` loads fixtures and checks if the number of users in the repository
-     * matches the expected count.
-     */
 
     public function testUserRepo(): void
     {
@@ -60,11 +50,6 @@ class UserRepositoryTest extends KernelTestCase
         $this->assertEquals(12, $users);
 
     }
-
-    /**
-     * The function `testUpdatePassword` tests the functionality of upgrading a user's password in a
-     * PHP application.
-     */
 
     public function testUpdatePassword(): void
     {
@@ -83,11 +68,6 @@ class UserRepositoryTest extends KernelTestCase
 
     }
 
-    /**
-     * The function `testUpgradePasswordError` tests the upgradePassword method with an unsupported
-     * user, expecting an UnsupportedUserException.
-     */
-
     public function testUpgradePasswordError(): void
     {
         $unsupportedUser = $this->createMock(PasswordAuthenticatedUserInterface::class);
@@ -98,11 +78,6 @@ class UserRepositoryTest extends KernelTestCase
 
     }
 
-    /**
-     * The tearDown function in PHP is used to clean up resources and unset variables after a test case
-     * has been executed.
-     */
-    
     protected function tearDown(): void
     {
         parent::tearDown();
