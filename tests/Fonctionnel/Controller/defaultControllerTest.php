@@ -5,8 +5,9 @@ namespace App\Tests\Fonctionnel\Controller;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 
-class defaultControllerTest extends WebTestCase
+class DefaultControllerTest extends WebTestCase
 {
+
     private $client;
 
     public function setUp(): void
@@ -20,13 +21,12 @@ class defaultControllerTest extends WebTestCase
         $form = $crawler->selectButton('Se connecter')->form();
         $this->client->submit($form, ['_username' => $login, '_password' => $password]);
     }
-    
+
 
     public function testDefaultController(): void
     {
-        $this->login('User', 'user');
+        $this->login('Anonyme', 'anon');
         $this->client->request('GET', '/');
-
         $this->assertSelectorTextContains('h1', 'Bienvenue sur Todo List, l\'application vous permettant de gérer l\'ensemble de vos tâches sans effort !');
     }
 }

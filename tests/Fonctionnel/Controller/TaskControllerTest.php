@@ -7,7 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use App\Entity\Task;
 use App\Entity\User;
 
-Class TaskControllerTest extends WebTestCase
+class TaskControllerTest extends WebTestCase
 {
     private $client;
 
@@ -16,7 +16,7 @@ Class TaskControllerTest extends WebTestCase
     public function setUp(): void
     {
         $this->client = static::createClient();
-        
+
         $this->em = static::getContainer()->get(EntityManagerInterface::class);
 
     }
@@ -29,11 +29,11 @@ Class TaskControllerTest extends WebTestCase
     }
 
     public function testListTask(): void
-    {   
+    {
         $this->login('Admin', 'admin');
         $this->client->request('GET', '/task');
         $this->assertEquals('200', $this->client->getResponse()->getStatusCode());
-       
+
     }
 
     public function testCreateAction(): void

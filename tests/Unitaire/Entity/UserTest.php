@@ -7,7 +7,8 @@ use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 class UserTest extends KernelTestCase
 {
-    public function getEntity(string $email, string $username, string $password, Array $role): User
+
+    public function getEntity(string $email, string $username, string $password, array $role): User
     {
         $user = new User();
         $user->setEmail($email);

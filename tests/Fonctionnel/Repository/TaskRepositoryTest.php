@@ -15,24 +15,24 @@ class TaskRepositoryTest extends KernelTestCase
      * @var AbstractDatabaseTool
      */
 
-     protected $databaseTool;
+    protected $databaseTool;
 
-     protected $em;
+    protected $em;
 
-     public function setUp(): void
-     {
+    public function setUp(): void
+    {
         parent::setUp();
 
         $this->databaseTool = static::getContainer()->get(DatabaseToolCollection::class)->get();
 
         $this->em = static::getContainer()->get(EntityManagerInterface::class);
-     }
+    }
 
 
-      #[DependsExternal('App\tests\Fonctionnel\Repository\UserRepositoryTest', 'testUserRepo')]
+    #[DependsExternal('App\tests\Fonctionnel\Repository\UserRepositoryTest', 'testUserRepo')]
     public function testTaskRepo(): void
     {
-       
+
         $this->databaseTool->loadAliceFixture([
             __DIR__ . '/TaskRepositoryTestFixtures.yaml'
         ]);
@@ -45,7 +45,7 @@ class TaskRepositoryTest extends KernelTestCase
 
     protected function tearDown(): void
     {
-        
+
         parent::tearDown();
         unset($this->databaseTool);
 

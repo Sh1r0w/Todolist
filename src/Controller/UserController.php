@@ -14,28 +14,28 @@ use Symfony\Component\Security\Http\Attribute\IsGranted;
 class UserController extends AbstractController
 {
 
-     #[Route('/user', name: 'user_list')]
-     #[IsGranted("ROLE_ADMIN")]
+    #[Route('/user', name: 'user_list')]
+    #[IsGranted("ROLE_ADMIN")]
     public function listAction(EntityManagerInterface $em)
     {
         return $this->render('user/list.html.twig', ['users' => $em->getRepository(User::class)->findAll()]);
     }
 
 
-     #[Route('/users/create', name: 'user_create')]
-     #[IsGranted("ROLE_ADMIN")]
+    #[Route('/users/create', name: 'user_create')]
+    #[IsGranted("ROLE_ADMIN")]
     public function createAction(Request $request, EntityManagerInterface $em, UserPasswordHasherInterface $userPasswordHasher)
     {
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
-  
+
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 
             $user->setPassword(
                 $userPasswordHasher->hashPassword(
-                    $user, 
+                    $user,
                     $form->get('password')->getData()
                 )
             );
@@ -50,9 +50,9 @@ class UserController extends AbstractController
         return $this->render('user/create.html.twig', ['form' => $form->createView()]);
     }
 
-     #[Route('/users/{id}/edit', name: 'user_edit')]
-     #[IsGranted("ROLE_ADMIN")]
-    public function editAction(User $user, Request $request, EntityManagerInterface $em,  UserPasswordHasherInterface $userPasswordHasher)
+    #[Route('/users/{id}/edit', name: 'user_edit')]
+    #[IsGranted("ROLE_ADMIN")]
+    public function editAction(User $user, Request $request, EntityManagerInterface $em, UserPasswordHasherInterface $userPasswordHasher)
     {
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
@@ -61,7 +61,7 @@ class UserController extends AbstractController
 
             $user->setPassword(
                 $userPasswordHasher->hashPassword(
-                    $user, 
+                    $user,
                     $form->get('password')->getData()
                 )
             );

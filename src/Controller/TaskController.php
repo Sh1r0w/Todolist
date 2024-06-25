@@ -15,14 +15,14 @@ class TaskController extends AbstractController
 {
 
 
-     #[Route('/task', name: 'task_list')]
+    #[Route('/task', name: 'task_list')]
     public function listAction(EntityManagerInterface $em)
     {
         return $this->render('task/list.html.twig', ['tasks' => $em->getRepository(Task::class)->findAll()]);
     }
 
 
-     #[Route('/tasks/create', name: 'task_create')]
+    #[Route('/tasks/create', name: 'task_create')]
     public function createAction(Request $request, EntityManagerInterface $em)
     {
         $task = new Task();
@@ -34,7 +34,7 @@ class TaskController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
 
             $task->setUser($idUs)
-                 ->setCreatedAt(new \DateTime());
+                ->setCreatedAt(new \DateTime());
             $em->persist($task);
             $em->flush();
 
@@ -46,8 +46,8 @@ class TaskController extends AbstractController
     }
 
 
-     #[Route('/tasks/{id}/edit', name: 'task_edit')]
-    public function editAction(Task $task, Request $request,EntityManagerInterface $em)
+    #[Route('/tasks/{id}/edit', name: 'task_edit')]
+    public function editAction(Task $task, Request $request, EntityManagerInterface $em)
     {
         $form = $this->createForm(TaskType::class, $task);
         $form->handleRequest($request);
@@ -59,14 +59,14 @@ class TaskController extends AbstractController
 
             return $this->redirectToRoute('task_list');
         }
-    
+
         return $this->render('task/edit.html.twig', [
             'form' => $form->createView(),
             'task' => $task,
         ]);
     }
 
-     #[Route('/tasks/{id}/toggle', name: 'task_toggle')]
+    #[Route('/tasks/{id}/toggle', name: 'task_toggle')]
     public function toggleTaskAction(Task $task, EntityManagerInterface $em)
     {
         $task->toggle(!$task->isDone());
@@ -77,22 +77,22 @@ class TaskController extends AbstractController
         return $this->redirectToRoute('task_list');
     }
 
-     #[Route('/tasks/{id}/delete', name: 'task_delete')]
+    #[Route('/tasks/{id}/delete', name: 'task_delete')]
     public function deleteTaskAction(Task $task, EntityManagerInterface $em)
     {
-            $idUserTask = $task->getUser()->getId() ;
-            $idUser = $this->getUser()->getId();
-            $userRole = $this->getUser()->getRoles();
+        $idUserTask = $task->getUser()->getId();
+        $idUser = $this->getUser()->getId();
+        $userRole = $this->getUser()->getRoles();
 
-        if($idUserTask === $idUser || isset($userRole[0])){
-        $em->remove($task);
-        $em->flush();
+        if ($idUserTask === $idUser || isset($userRole[0])) {
+            $em->remove($task);
+            $em->flush();
 
-        $this->addFlash('success', 'La tâche a bien été supprimée.');
-    } else {
-        $this->addFlash('error', "ce n'ai pas votre tache.");
-    }
-    
+            $this->addFlash('success', 'La tâche a bien été supprimée.');
+        } else {
+            $this->addFlash('error', "ce n'ai pas votre tache.");
+        }
+
         return $this->redirectToRoute('task_list');
     }
 }

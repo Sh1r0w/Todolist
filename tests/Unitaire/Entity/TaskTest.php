@@ -18,7 +18,7 @@ class TaskTest extends KernelTestCase
         $task->setCreatedAt(new \DateTime());
 
         return $task;
-        
+
     }
 
     public function countError(Task $task, int $number = 0)

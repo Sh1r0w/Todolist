@@ -27,9 +27,9 @@ class UserRepositoryTest extends KernelTestCase
 
     public function setUp(): void
     {
-        parent::setUp(); 
+        parent::setUp();
 
-        
+
         $this->databaseTool = static::getContainer()->get(DatabaseToolCollection::class)->get();
 
         $this->em = static::getContainer()->get(EntityManagerInterface::class);
@@ -54,17 +54,17 @@ class UserRepositoryTest extends KernelTestCase
     public function testUpdatePassword(): void
     {
         $user = new User();
-    $user->setPassword('old_password');
-    $user->setEmail('test@gmail.com');
-    $user->setUsername('reTest');
-    $newHashedPassword = 'new_password';
+        $user->setPassword('old_password');
+        $user->setEmail('test@gmail.com');
+        $user->setUsername('reTest');
+        $newHashedPassword = 'new_password';
 
-    $this->em->persist($user);
-    $this->em->flush();
+        $this->em->persist($user);
+        $this->em->flush();
 
-    $this->repo->upgradePassword($user, $newHashedPassword);
+        $this->repo->upgradePassword($user, $newHashedPassword);
 
-    $this->assertSame($newHashedPassword, $user->getPassword());
+        $this->assertSame($newHashedPassword, $user->getPassword());
 
     }
 
@@ -72,10 +72,10 @@ class UserRepositoryTest extends KernelTestCase
     {
         $unsupportedUser = $this->createMock(PasswordAuthenticatedUserInterface::class);
         $newHashedPassword = 'test';
-    
+
         $this->expectException(UnsupportedUserException::class);
         $this->repo->upgradePassword($unsupportedUser, $newHashedPassword);
-    
+
     }
 
     protected function tearDown(): void
