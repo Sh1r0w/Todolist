@@ -62,7 +62,7 @@ This will create a file in `root\migrations\Version1246541314513.php` (the numbe
 In this file, you need to add the following line:
 
 
-"$this->addSql('UPDATE task SET user_id = (SELECT id FROM user WHERE user.username = "Anonyme")');""
+"$this->addSql('UPDATE task SET user_id = (SELECT id FROM user WHERE user.username = "Anonyme")');"
 
 
 right after the creation of the `user_id` table:
