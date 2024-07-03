@@ -43,7 +43,7 @@ class Task
 
     }
 
-    public function getId(): string
+    public function getId(): int
     {
         return $this->id;
     }
@@ -78,12 +78,12 @@ class Task
         $this->content = $content;
     }
 
-    public function isDone(): ?bool
+    public function isDone(): ?string
     {
         return $this->isDone;
     }
 
-    public function toggle(?Bool $flag): void
+    public function toggle(?string $flag): void
     {
         $this->isDone = $flag;
     }
