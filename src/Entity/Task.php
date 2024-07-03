@@ -30,7 +30,7 @@ class Task
     private ?string $content;
 
 
-     #[ORM\Column(type: Types::BOOLEAN)]
+     #[ORM\Column(type: Types::STRING)]
     private ?string $isDone;
 
      #[ORM\ManyToOne]
@@ -43,7 +43,7 @@ class Task
 
     }
 
-    public function getId()
+    public function getId(): string
     {
         return $this->id;
     }
@@ -53,37 +53,37 @@ class Task
         return $this->createdAt;
     }
 
-    public function setCreatedAt(\DateTimeInterface $createdAt)
+    public function setCreatedAt(\DateTimeInterface $createdAt): void
     {
         $this->createdAt = $createdAt;
     }
 
-    public function getTitle()
+    public function getTitle(): string
     {
         return $this->title;
     }
 
-    public function setTitle($title)
+    public function setTitle(string $title): void
     {
         $this->title = $title;
     }
 
-    public function getContent()
+    public function getContent(): string
     {
         return $this->content;
     }
 
-    public function setContent($content)
+    public function setContent(string $content): void
     {
         $this->content = $content;
     }
 
-    public function isDone()
+    public function isDone(): ?bool
     {
         return $this->isDone;
     }
 
-    public function toggle($flag)
+    public function toggle(?Bool $flag): void
     {
         $this->isDone = $flag;
     }
