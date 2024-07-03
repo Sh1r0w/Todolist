@@ -16,7 +16,7 @@ class TaskController extends AbstractController
 
 
     #[Route('/task', name: 'task_list')]
-    public function listAction(EntityManagerInterface $em)
+    public function listAction(EntityManagerInterface $em): Response
     {
         return $this->render('task/list.html.twig', ['tasks' => $em->getRepository(Task::class)->findAll()]);
     }
