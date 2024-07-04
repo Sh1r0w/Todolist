@@ -12,6 +12,7 @@ framework:
         handler_id: null
         cookie_secure: auto
         cookie_samesite: lax
+        name: t14525454141d5544
 
     #esi: true
     #fragments: true

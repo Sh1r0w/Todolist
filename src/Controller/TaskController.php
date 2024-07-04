@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use App\Entity\User;
 use App\Entity\Task;
@@ -16,14 +16,14 @@ class TaskController extends AbstractController
 
 
     #[Route('/task', name: 'task_list')]
-    public function listAction(EntityManagerInterface $em)
+    public function listAction(EntityManagerInterface $em): Response
     {
         return $this->render('task/list.html.twig', ['tasks' => $em->getRepository(Task::class)->findAll()]);
     }
 
 
     #[Route('/tasks/create', name: 'task_create')]
-    public function createAction(Request $request, EntityManagerInterface $em)
+    public function createAction(Request $request, EntityManagerInterface $em): Response
     {
         $task = new Task();
         $form = $this->createForm(TaskType::class, $task);
@@ -47,7 +47,7 @@ class TaskController extends AbstractController
 
 
     #[Route('/tasks/{id}/edit', name: 'task_edit')]
-    public function editAction(Task $task, Request $request, EntityManagerInterface $em)
+    public function editAction(Task $task, Request $request, EntityManagerInterface $em): Response
     {
         $form = $this->createForm(TaskType::class, $task);
         $form->handleRequest($request);
@@ -67,7 +67,7 @@ class TaskController extends AbstractController
     }
 
     #[Route('/tasks/{id}/toggle', name: 'task_toggle')]
-    public function toggleTaskAction(Task $task, EntityManagerInterface $em)
+    public function toggleTaskAction(Task $task, EntityManagerInterface $em): Response
     {
         $task->toggle(!$task->isDone());
         $em->flush();
@@ -78,13 +78,13 @@ class TaskController extends AbstractController
     }
 
     #[Route('/tasks/{id}/delete', name: 'task_delete')]
-    public function deleteTaskAction(Task $task, EntityManagerInterface $em)
+    public function deleteTaskAction(Task $task, EntityManagerInterface $em): Response
     {
         $idUserTask = $task->getUser()->getId();
         $idUser = $this->getUser()->getId();
         $userRole = $this->getUser()->getRoles();
 
-        if ($idUserTask === $idUser || isset($userRole[0])) {
+        if ($idUserTask === $idUser || isset($userRole[0]) === ["ROLE_ADMIN"]) {
             $em->remove($task);
             $em->flush();
 
